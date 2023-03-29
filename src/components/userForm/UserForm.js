@@ -24,12 +24,11 @@ const UserForm = () => {
         <div>
             {/* <p>Username:{user?.username} Email:{user?.email}</p> */}
 
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">Email: </label>
             <input name="email" onChange={(e) => setInputMail(e.target.value)} value={inputMail}></input>
-            <label htmlFor="name">Username</label>
+            <label htmlFor="name">Username: </label>
             <input name="name" onChange={(e) => setInputName(e.target.value)} value={inputName}></input>
             <button onClick={handleGetUser}>Set another user</button>
-
         </div>
     </div>)
 

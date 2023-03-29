@@ -7,16 +7,16 @@ import UserTextComponent from "../userForm/TextComponent";
 import UserForm from "../userForm/UserForm";
 
 function AppLayout() {
-    
+
 
     return <div>
-        <Counter/>
-        <hr/>
+        <Counter />
+        <hr />
         <TextComponent />
-        <hr/>
-        <UserTextComponent/>
-        <br/>
-        <UserForm/>
+        <hr />
+        <UserForm />
+        <hr />
+        <UserTextComponent />
     </div>
 }
 

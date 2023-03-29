@@ -5,15 +5,15 @@ import { email } from "../../store/userForm/slice";
 import { username } from "../../store/userForm/slice";
 
 
- const UserForm = () => {  
+const UserForm = () => {
 
-     const user = useSelector(userSelector);
+    const user = useSelector(userSelector);
 
-     console.log('user iz reduxa: ', user)
+    console.log('user iz reduxa: ', user)
     const dispatch = useDispatch();
-   
-    const [inputMail, setInputMail] = useState('user@email.com')
-    const [inputName, setInputName] = useState('username')
+
+    const [inputMail, setInputMail] = useState(user.username)
+    const [inputName, setInputName] = useState(user.email)
 
     const handleGetUser = () => {
         dispatch(email(inputMail));
@@ -21,18 +21,18 @@ import { username } from "../../store/userForm/slice";
     }
 
     return (<div>
-            <div>
-                {/* <p>Username:{user?.username} Email:{user?.email}</p> */}
-                
-                <label htmlFor="email">Email</label>
-                <input name="email" onChange={(e) => setInputMail(e.target.value)} value={inputMail}></input>
-                <label htmlFor="name">Name</label>
-                <input name="name" onChange={(e) => setInputName(e.target.value)} value={inputName}></input>
-                <button onClick={handleGetUser}>Set another user</button>
-                
-            </div>
-        </div>)
-    
+        <div>
+            {/* <p>Username:{user?.username} Email:{user?.email}</p> */}
+
+            <label htmlFor="email">Email</label>
+            <input name="email" onChange={(e) => setInputMail(e.target.value)} value={inputMail}></input>
+            <label htmlFor="name">Username</label>
+            <input name="name" onChange={(e) => setInputName(e.target.value)} value={inputName}></input>
+            <button onClick={handleGetUser}>Set another user</button>
+
+        </div>
+    </div>)
+
 }
 
 export default UserForm;

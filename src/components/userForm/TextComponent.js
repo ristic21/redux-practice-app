@@ -6,6 +6,7 @@ const UserTextComponent = () => {
     const user = useSelector(userSelector);
     return <div>
         Username: {user.username}
+        <br />
         Email: {user.email}
     </div>
 }
